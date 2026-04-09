@@ -31,21 +31,23 @@ Then restart Claude Code.
 - **Milestones** — achievements like "Perfect Prompt" award bonus XP
 - **`/pet` command** — toggle display on/off, check status, reset with random family
 
-## Evolution Families
+## Evolution Map
 
-Each family has 5 stages with exponential XP thresholds: **0 → 100 → 400 → 1,600 → 6,400**
+9 families, 5 stages each. You're randomly assigned a family on install. XP thresholds: **0 → 100 → 400 → 1,600 → 6,400**
 
-| Family | Stage 1 | Stage 2 | Stage 3 | Stage 4 | Stage 5 | Voice |
-|--------|---------|---------|---------|---------|---------|-------|
-| Titan | Larva | Juvenile | Warrior | Elder | Titan | Deep rumble → earth-shaking |
-| Swarm | Spore | Nymph | Worker | Sentinel | Hive | Faint buzz → omnipresent drone |
-| Golem | Pebble | Boulder | Golem | Colossus | Monolith | Grinding stone → mountain |
-| Invader | Probe | Scout | Drone | Soldier | Commander | Static → fleet commander |
-| Crawler | Mite | Beetle | Crawler | Stalker | Behemoth | Tiny clicks → silence then strike |
-| Brute | Seed | Sprout | Grunt | Hunter | Brute | Tiny grunt → thunderous roar |
-| Phantom | Wisp | Shade | Phantom | Wraith | Spectre | Faint whisper → the void speaks |
-| Aberrant | Flicker | Glitch | Anomaly | Aberrant | Nexus | Corrupted static → omnidimensional |
-| Raptor | Hatchling | Swooper | Talon | Raptor | Apex | Tiny chirps → thunder from above |
+![Evolution Map](docs/evolution-map.png)
+
+| Family | Stages | Voice |
+|--------|--------|-------|
+| **Titan** | Larva → Juvenile → Warrior → Elder → Titan | Deep rumble → earth-shaking |
+| **Swarm** | Spore → Nymph → Worker → Sentinel → Hive | Faint buzz → omnipresent drone |
+| **Golem** | Pebble → Boulder → Golem → Colossus → Monolith | Grinding stone → mountain |
+| **Invader** | Probe → Scout → Drone → Soldier → Commander | Static → fleet commander |
+| **Crawler** | Mite → Beetle → Crawler → Stalker → Behemoth | Tiny clicks → silence then strike |
+| **Brute** | Seed → Sprout → Grunt → Hunter → Brute | Tiny grunt → thunderous roar |
+| **Phantom** | Wisp → Shade → Phantom → Wraith → Spectre | Faint whisper → the void speaks |
+| **Aberrant** | Flicker → Glitch → Anomaly → Aberrant → Nexus | Corrupted static → omnidimensional |
+| **Raptor** | Hatchling → Swooper → Talon → Raptor → Apex | Tiny chirps → thunder from above |
 
 ## Scoring Dimensions
 
@@ -119,6 +121,13 @@ rm -rf ~/.claude/pet-buddy ~/.claude/skills/pet
 
 Remove the hook and statusLine entries from `~/.claude/settings.json`.
 
+## Credits
+
+Creature pixel art derived from [MonstaPix](http://fontstruct.com/fontstructions/show/475298) by **Ken Bruce**, licensed under [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+
 ## License
 
-MIT
+This project is non-commercial and open source.
+
+- **Code:** MIT License (see [LICENSE](../LICENSE))
+- **Creature sprites:** [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/) — derived from MonstaPix by Ken Bruce
