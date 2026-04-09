@@ -11,6 +11,8 @@
 ▀█▀█▀
 ```
 
+![Status line preview](docs/statusline-preview.png)
+
 ## Quick Start
 
 ```bash
