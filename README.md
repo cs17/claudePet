@@ -3,7 +3,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/cs17/claudePet/badge.svg)](https://snyk.io/test/github/cs17/claudePet)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cs17_claudePet&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=cs17_claudePet)
 
-> An evolving pixel-art pet companion for Claude Code that lives in your status line, scores your prompts, and grows stronger as you write better code.
+> Claude removed the `/buddy` feature — *"April Fools feature and has been removed in the latest release, so closing this as not planned."* So I built my own. An evolving pixel-art pet companion for Claude Code that lives in your status line, scores your prompts, and grows stronger as you write better code.
 
 ```
 ▄█▄█▄
