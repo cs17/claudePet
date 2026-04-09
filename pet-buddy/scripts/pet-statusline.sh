@@ -88,65 +88,46 @@ if [ "$PET_DISPLAY" = "true" ] && [ -f "$PET_STATE" ] && [ -f "$PET_SPRITES" ] &
     PET_XP_NEXT="MAX"
   fi
 
-  # Read last activity for speech bubble (within 120s)
-  BUBBLE_MSG=""
+  PET_NAME=$(jq -r ".evolutionLines.\"${PET_LINE_ID}\".stages[$PET_STAGE_IDX].name" "$PET_CREATURES" 2>/dev/null)
+
+  # Read last activity message (within 10 min)
+  PET_MSG=""
   if [ -f "$PET_ACTIVITY" ]; then
     ACT_TS=$(jq -r '.timestamp // 0' "$PET_ACTIVITY")
-    ACT_XP=$(jq -r '.xp // 0' "$PET_ACTIVITY")
     ACT_MSG=$(jq -r '.message // ""' "$PET_ACTIVITY")
     NOW_S=$(date +%s)
     ACT_S=$((ACT_TS / 1000))
     AGE=$((NOW_S - ACT_S))
     if [ "$AGE" -lt 600 ] 2>/dev/null; then
-      BUBBLE_MSG="+${ACT_XP}XP ${ACT_MSG}"
+      PET_MSG="$ACT_MSG"
     fi
   fi
 
-  # Read sprite lines
-  SPRITE_LINES=()
-  while IFS= read -r line; do
-    SPRITE_LINES+=("$line")
-  done < <(jq -r ".\"${PET_LINE_ID}\".\"${PET_STAGE_IDX}\"[]" "$PET_SPRITES" 2>/dev/null)
+  # Read sprite lines and print with message on first, info on last
+  if [ -f "$PET_SPRITES" ]; then
+    SPRITE_LINES=()
+    while IFS= read -r line; do
+      SPRITE_LINES+=("$line")
+    done < <(jq -r ".\"${PET_LINE_ID}\".\"${PET_STAGE_IDX}\"[]" "$PET_SPRITES" 2>/dev/null)
 
-  # Build bubble lines
-  BUBBLE_LINES=()
-  if [ -n "$BUBBLE_MSG" ]; then
-    BUBBLE_MSG="${BUBBLE_MSG:0:42}"
-    BW=${#BUBBLE_MSG}
-    BUBBLE_LINES+=("┌$(printf '─%.0s' $(seq 1 $((BW+2))))┐")
-    BUBBLE_LINES+=("│ ${BUBBLE_MSG} │")
-    BUBBLE_LINES+=("└$(printf '─%.0s' $(seq 1 $((BW+2))))┘")
+    SPRITE_W=0
+    for sl in "${SPRITE_LINES[@]}"; do
+      [ ${#sl} -gt "$SPRITE_W" ] && SPRITE_W=${#sl}
+    done
+    SPRITE_W=$((SPRITE_W + 1))
+
+    LAST_IDX=$(( ${#SPRITE_LINES[@]} - 1 ))
+    for (( i=0; i<${#SPRITE_LINES[@]}; i++ )); do
+      PADDED=$(printf "%-${SPRITE_W}s" "${SPRITE_LINES[$i]}")
+      if [ "$i" -eq 0 ] && [ -n "$PET_MSG" ]; then
+        printf "%b\n" "${GRAY}${PADDED} ${PET_MSG}${RST}"
+      elif [ "$i" -eq "$LAST_IDX" ]; then
+        printf "%b\n" "${GRAY}${PADDED} Pet: ◆ ${PET_NAME:-???}  ♥ ${PET_XP}/${PET_XP_NEXT} XP${RST}"
+      else
+        printf "%b\n" "${GRAY}${PADDED}${RST}"
+      fi
+    done
   fi
 
-  PET_NAME=$(jq -r ".evolutionLines.\"${PET_LINE_ID}\".stages[$PET_STAGE_IDX].name" "$PET_CREATURES" 2>/dev/null)
-  XP_LINE="♥ ${PET_XP}/${PET_XP_NEXT} XP"
-  NAME_LINE="◆ ${PET_NAME:-???}"
-
-  # Combine: sprite on left, info on right
-  RIGHT_LINES=()
-  if [ ${#BUBBLE_LINES[@]} -gt 0 ]; then
-    for bl in "${BUBBLE_LINES[@]}"; do RIGHT_LINES+=("$bl"); done
-  fi
-  RIGHT_LINES+=("$XP_LINE")
-  RIGHT_LINES+=("$NAME_LINE")
-
-  SPRITE_W=0
-  for sl in "${SPRITE_LINES[@]}"; do
-    [ ${#sl} -gt "$SPRITE_W" ] && SPRITE_W=${#sl}
-  done
-  SPRITE_W=$((SPRITE_W + 4))
-
-  TOTAL_LINES=${#RIGHT_LINES[@]}
-  [ "${#SPRITE_LINES[@]}" -gt "$TOTAL_LINES" ] && TOTAL_LINES=${#SPRITE_LINES[@]}
-
-  for (( r=0; r<TOTAL_LINES; r++ )); do
-    SP=""
-    [ "$r" -lt "${#SPRITE_LINES[@]}" ] && SP="${SPRITE_LINES[$r]}"
-    PADDED_SP=$(printf "%-${SPRITE_W}s" "$SP")
-    RIGHT=""
-    [ "$r" -lt "${#RIGHT_LINES[@]}" ] && RIGHT="${RIGHT_LINES[$r]}"
-    printf "%b\n" "${GRAY}${PADDED_SP} ${RIGHT}${RST}"
-  done
+  printf "%b\n" "$L"
 fi
-
-printf "%b\n" "$L"
