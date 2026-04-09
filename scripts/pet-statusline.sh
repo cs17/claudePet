@@ -66,7 +66,7 @@ L="${L}${SEP}${BAR_CLR}${BAR}${RST}${GRAY} ${PCT}%${RST}"
 L="${L}${SEP}${GRAY}${COST_FMT}${RST}"
 
 # ── Pet Buddy (monstapix block art) ──────────────────────────────────────────
-PET_DIR="$HOME/.claude/pet-buddy"
+PET_DIR="$HOME/.claude/claude-pet"
 PET_STATE="$PET_DIR/state.json"
 PET_SPRITES="$PET_DIR/sprites.json"
 PET_CONFIG="$PET_DIR/config.json"

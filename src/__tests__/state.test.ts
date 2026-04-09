@@ -9,7 +9,7 @@ describe("StateManager", () => {
   let manager: StateManager;
 
   beforeEach(() => {
-    tempDir = mkdtempSync(join(tmpdir(), "pet-buddy-test-"));
+    tempDir = mkdtempSync(join(tmpdir(), "claude-pet-test-"));
     manager = new StateManager(tempDir);
   });
 

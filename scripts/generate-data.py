@@ -17,7 +17,7 @@ CREATURES_FILE = os.path.join(DATA_DIR, "creatures.json")
 SPRITES_FILE = os.path.join(DATA_DIR, "sprites.json")
 
 # Try to load font for sprite generation
-FONT_PATH = os.path.expanduser("~/.claude/pet-buddy/monstapix.ttf")
+FONT_PATH = os.path.expanduser("~/.claude/claude-pet/monstapix.ttf")
 HAS_FONT = os.path.exists(FONT_PATH)
 
 # XP thresholds for 5 stages (exponential: 0, 100, 400, 1600, 6400)

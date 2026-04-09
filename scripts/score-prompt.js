@@ -9,7 +9,7 @@ import { homedir } from "os";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = resolve(__dirname, "..", "dist");
-const DATA_DIR = resolve(homedir(), ".claude", "pet-buddy");
+const DATA_DIR = resolve(homedir(), ".claude", "claude-pet");
 
 // Read prompt from stdin
 let prompt = "";

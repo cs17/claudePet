@@ -13,7 +13,7 @@ import { fileURLToPath } from "url";
 import { homedir } from "os";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = resolve(homedir(), ".claude", "pet-buddy");
+const DATA_DIR = resolve(homedir(), ".claude", "claude-pet");
 const stateManager = new StateManager(DATA_DIR);
 const registry: CreatureRegistry = JSON.parse(
   readFileSync(resolve(__dirname, "data", "creatures.json"), "utf-8")

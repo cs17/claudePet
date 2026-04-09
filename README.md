@@ -74,7 +74,7 @@ Each prompt is scored 0-20 per dimension (max 100 total):
 
 ```bash
 claude mcp remove claude-pet
-rm -rf ~/.claude/pet-buddy ~/.claude/skills/pet
+rm -rf ~/.claude/claude-pet ~/.claude/skills/pet
 ```
 
 Remove the `UserPromptSubmit` hook and `statusLine` entries from `~/.claude/settings.json`.
@@ -107,7 +107,7 @@ Remove the `UserPromptSubmit` hook and `statusLine` entries from `~/.claude/sett
 <details>
 <summary>Data files</summary>
 
-Pet state persists in `~/.claude/pet-buddy/`:
+Pet state persists in `~/.claude/claude-pet/`:
 - `state.json` — XP, level, streaks, milestones, assigned family
 - `sprites.json` — block-art creature sprites
 - `creatures.json` — creature registry

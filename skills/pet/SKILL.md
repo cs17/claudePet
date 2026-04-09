@@ -18,30 +18,30 @@ The user wants to control their pet buddy display. Parse their argument:
 ### Turn ON
 Run this command:
 ```bash
-echo '{"display": true}' > ~/.claude/pet-buddy/config.json
+echo '{"display": true}' > ~/.claude/claude-pet/config.json
 ```
 Then respond: "Pet display turned ON."
 
 ### Turn OFF
 Run this command:
 ```bash
-echo '{"display": false}' > ~/.claude/pet-buddy/config.json
+echo '{"display": false}' > ~/.claude/claude-pet/config.json
 ```
 Then respond: "Pet display turned OFF."
 
 ### Status
-Read `~/.claude/pet-buddy/state.json` and report the pet's current stage, XP, streak, and milestones. Also mention whether display is currently on or off by reading `~/.claude/pet-buddy/config.json`.
+Read `~/.claude/claude-pet/state.json` and report the pet's current stage, XP, streak, and milestones. Also mention whether display is currently on or off by reading `~/.claude/claude-pet/config.json`.
 
 ### Reset
 Run this command to pick a random family and reset:
 ```bash
 FAMILIES=(titan swarm golem invader crawler brute phantom aberrant raptor)
 RANDOM_FAMILY=${FAMILIES[$((RANDOM % ${#FAMILIES[@]}))]}
-STAGE_NAME=$(jq -r ".evolutionLines.\"$RANDOM_FAMILY\".stages[0].name" ~/.claude/pet-buddy/creatures.json)
-cat > ~/.claude/pet-buddy/state.json << STATE
+STAGE_NAME=$(jq -r ".evolutionLines.\"$RANDOM_FAMILY\".stages[0].name" ~/.claude/claude-pet/creatures.json)
+cat > ~/.claude/claude-pet/state.json << STATE
 {"currentLineId":"$RANDOM_FAMILY","currentStageIndex":0,"xp":0,"totalPromptsScored":0,"streakDays":0,"lastActiveDate":"","milestonesCompleted":[],"evolutionHistory":[]}
 STATE
-rm -f ~/.claude/pet-buddy/last-activity.json
+rm -f ~/.claude/claude-pet/last-activity.json
 echo "$RANDOM_FAMILY $STAGE_NAME"
 ```
 Read the output to get the assigned family and stage name. Then respond: "Pet reset! You got a **[stage name]** from the **[family]** line. Start fresh!"

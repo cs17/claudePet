@@ -6,7 +6,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PET_DATA_DIR="$HOME/.claude/pet-buddy"
+PET_DATA_DIR="$HOME/.claude/claude-pet"
 SETTINGS_FILE="$HOME/.claude/settings.json"
 SERVER_PATH="$SCRIPT_DIR/dist/server.js"
 HOOK_PATH="$SCRIPT_DIR/scripts/pet-hook.sh"
