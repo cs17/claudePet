@@ -82,17 +82,6 @@ Each prompt is scored 0-20 per dimension (max 100 total):
 6. Copies data files and `/pet` skill to `~/.claude/`
 7. Randomly assigns a creature family
 
-## Development
-
-To modify creature families, edit `src/data/families.json` then regenerate:
-
-```bash
-npm run generate   # requires monstapix.ttf in ~/.claude/pet-buddy/
-npm run build
-```
-
-The `families.json` is the single source of truth — all creature data, sprites, and messages are generated from it.
-
 ## Data
 
 Pet state persists in `~/.claude/pet-buddy/`:
