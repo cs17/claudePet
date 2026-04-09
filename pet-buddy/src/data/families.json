@@ -1,0 +1,110 @@
+[
+  {
+    "family_id": "titan",
+    "family_name": "Titan line",
+    "growth_factor": 4.4,
+    "stages": [
+      { "stage": 1, "name": "Larva", "char": "`" },
+      { "stage": 2, "name": "Juvenile", "char": "z" },
+      { "stage": 3, "name": "Warrior", "char": "X" },
+      { "stage": 4, "name": "Elder", "char": "V" },
+      { "stage": 5, "name": "Titan", "char": "U" }
+    ]
+  },
+  {
+    "family_id": "swarm",
+    "family_name": "Swarm line",
+    "growth_factor": 2.8,
+    "stages": [
+      { "stage": 1, "name": "Spore", "char": "E" },
+      { "stage": 2, "name": "Nymph", "char": "q" },
+      { "stage": 3, "name": "Worker", "char": "b" },
+      { "stage": 4, "name": "Sentinel", "char": "i" },
+      { "stage": 5, "name": "Hive", "char": "O" }
+    ]
+  },
+  {
+    "family_id": "golem",
+    "family_name": "Golem line",
+    "growth_factor": 3.1,
+    "stages": [
+      { "stage": 1, "name": "Pebble", "char": "g" },
+      { "stage": 2, "name": "Boulder", "char": "d" },
+      { "stage": 3, "name": "Golem", "char": "8" },
+      { "stage": 4, "name": "Colossus", "char": "L" },
+      { "stage": 5, "name": "Monolith", "char": "M" }
+    ]
+  },
+  {
+    "family_id": "invader",
+    "family_name": "Invader line",
+    "growth_factor": 2.1,
+    "stages": [
+      { "stage": 1, "name": "Probe", "char": "C" },
+      { "stage": 2, "name": "Scout", "char": "a" },
+      { "stage": 3, "name": "Drone", "char": "s" },
+      { "stage": 4, "name": "Soldier", "char": "h" },
+      { "stage": 5, "name": "Commander", "char": "A" }
+    ]
+  },
+  {
+    "family_id": "crawler",
+    "family_name": "Crawler line",
+    "growth_factor": 3.2,
+    "stages": [
+      { "stage": 1, "name": "Mite", "char": "c" },
+      { "stage": 2, "name": "Beetle", "char": "k" },
+      { "stage": 3, "name": "Crawler", "char": "m" },
+      { "stage": 4, "name": "Stalker", "char": "v" },
+      { "stage": 5, "name": "Behemoth", "char": "W" }
+    ]
+  },
+  {
+    "family_id": "brute",
+    "family_name": "Brute line",
+    "growth_factor": 2.3,
+    "stages": [
+      { "stage": 1, "name": "Seed", "char": "B" },
+      { "stage": 2, "name": "Sprout", "char": "D" },
+      { "stage": 3, "name": "Grunt", "char": "F" },
+      { "stage": 4, "name": "Hunter", "char": "j" },
+      { "stage": 5, "name": "Brute", "char": "Q" }
+    ]
+  },
+  {
+    "family_id": "phantom",
+    "family_name": "Phantom line",
+    "growth_factor": 3.7,
+    "stages": [
+      { "stage": 1, "name": "Wisp", "char": ":" },
+      { "stage": 2, "name": "Shade", "char": "/" },
+      { "stage": 3, "name": "Phantom", "char": "f" },
+      { "stage": 4, "name": "Wraith", "char": "x" },
+      { "stage": 5, "name": "Spectre", "char": "T" }
+    ]
+  },
+  {
+    "family_id": "aberrant",
+    "family_name": "Aberrant line",
+    "growth_factor": 3.1,
+    "stages": [
+      { "stage": 1, "name": "Flicker", "char": "$" },
+      { "stage": 2, "name": "Glitch", "char": "3" },
+      { "stage": 3, "name": "Anomaly", "char": "\u00dd" },
+      { "stage": 4, "name": "Aberrant", "char": "J" },
+      { "stage": 5, "name": "Nexus", "char": "\u00d3" }
+    ]
+  },
+  {
+    "family_id": "raptor",
+    "family_name": "Raptor line",
+    "growth_factor": 3.5,
+    "stages": [
+      { "stage": 1, "name": "Hatchling", "char": "y" },
+      { "stage": 2, "name": "Swooper", "char": "l" },
+      { "stage": 3, "name": "Talon", "char": "K" },
+      { "stage": 4, "name": "Raptor", "char": "Y" },
+      { "stage": 5, "name": "Apex", "char": "N" }
+    ]
+  }
+]

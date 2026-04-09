@@ -1,0 +1,6 @@
+.worktrees/
+node_modules/
+dist/
+**/settings.local.json
+.DS_Store
+*.log

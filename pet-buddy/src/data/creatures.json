@@ -1,0 +1,1264 @@
+{
+  "evolutionLines": {
+    "titan": {
+      "family_name": "Titan line",
+      "stages": [
+        {
+          "id": "titan_larva",
+          "name": "Larva",
+          "char": "`",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "larval",
+          "speechStyle": "weak rumble",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*squirm* ...where?"
+            ],
+            "context": [
+              "*twitch* ...why?"
+            ],
+            "actionability": [
+              "*wiggle* ...do what?"
+            ],
+            "scope": [
+              "*shudder* ...so much..."
+            ],
+            "constraints": [
+              "*curl* ...how?"
+            ]
+          }
+        },
+        {
+          "id": "titan_juvenile",
+          "name": "Juvenile",
+          "char": "z",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "growing",
+          "speechStyle": "low growl",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Which file. Show me."
+            ],
+            "context": [
+              "What broke? Tell me."
+            ],
+            "actionability": [
+              "Give me something to crush."
+            ],
+            "scope": [
+              "Too spread out. Focus."
+            ],
+            "constraints": [
+              "Rules? I need boundaries."
+            ]
+          }
+        },
+        {
+          "id": "titan_warrior",
+          "name": "Warrior",
+          "char": "X",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "fierce",
+          "speechStyle": "battle-ready",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "TARGET. File. Line. Now."
+            ],
+            "context": [
+              "Brief me. What happened?"
+            ],
+            "actionability": [
+              "Give me the kill order."
+            ],
+            "scope": [
+              "One enemy at a time."
+            ],
+            "constraints": [
+              "Battle rules. State them."
+            ]
+          }
+        },
+        {
+          "id": "titan_elder",
+          "name": "Elder",
+          "char": "V",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "ancient",
+          "speechStyle": "deep thunder",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I've crushed vagueness before. Be exact."
+            ],
+            "context": [
+              "The battlefield. Describe it."
+            ],
+            "actionability": [
+              "Command me, or I choose."
+            ],
+            "scope": [
+              "Even titans have limits."
+            ],
+            "constraints": [
+              "What laws bind this fight?"
+            ]
+          }
+        },
+        {
+          "id": "titan_titan",
+          "name": "Titan",
+          "char": "U",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "colossal",
+          "speechStyle": "earth-shaking",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "MOUNTAINS HAVE COORDINATES. SO SHOULD YOUR ASK."
+            ],
+            "context": [
+              "I HAVE SEEN AGES PASS. WHAT IS THIS."
+            ],
+            "actionability": [
+              "SPEAK YOUR WILL INTO BEING."
+            ],
+            "scope": [
+              "THE WORLD IS VAST. PICK YOUR GROUND."
+            ],
+            "constraints": [
+              "EVEN THE TITAN OBEYS GRAVITY."
+            ]
+          }
+        }
+      ]
+    },
+    "swarm": {
+      "family_name": "Swarm line",
+      "stages": [
+        {
+          "id": "swarm_spore",
+          "name": "Spore",
+          "char": "E",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "dormant",
+          "speechStyle": "faint buzz",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*spore drift* ...land where?"
+            ],
+            "context": [
+              "*pulse* ...what soil?"
+            ],
+            "actionability": [
+              "*twitch* ...grow how?"
+            ],
+            "scope": [
+              "*scatter* ...too wide..."
+            ],
+            "constraints": [
+              "*vibrate* ...conditions?"
+            ]
+          }
+        },
+        {
+          "id": "swarm_nymph",
+          "name": "Nymph",
+          "char": "q",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "hatching",
+          "speechStyle": "soft clicking",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "We smell a file. Which one?"
+            ],
+            "context": [
+              "The colony needs context. Feed us."
+            ],
+            "actionability": [
+              "Task. We need a task."
+            ],
+            "scope": [
+              "Too many directions. Pick one."
+            ],
+            "constraints": [
+              "What shapes the hive?"
+            ]
+          }
+        },
+        {
+          "id": "swarm_worker",
+          "name": "Worker",
+          "char": "b",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "buzzing",
+          "speechStyle": "synchronized hum",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "The swarm needs coordinates."
+            ],
+            "context": [
+              "Report to the hive. What happened?"
+            ],
+            "actionability": [
+              "Assign the workers. What's the job?"
+            ],
+            "scope": [
+              "The colony can't be everywhere."
+            ],
+            "constraints": [
+              "Protocol. What are the rules?"
+            ]
+          }
+        },
+        {
+          "id": "swarm_sentinel",
+          "name": "Sentinel",
+          "char": "i",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "swarming",
+          "speechStyle": "thousand voices as one",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "We are many. Point us precisely."
+            ],
+            "context": [
+              "The hive remembers nothing. Tell us."
+            ],
+            "actionability": [
+              "Deploy us. Give the signal."
+            ],
+            "scope": [
+              "Even swarms need a perimeter."
+            ],
+            "constraints": [
+              "The queen demands order. Rules?"
+            ]
+          }
+        },
+        {
+          "id": "swarm_hive",
+          "name": "Hive",
+          "char": "O",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "hivemind",
+          "speechStyle": "omnipresent drone",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "WE ARE EVERYWHERE. WHERE DO YOU NEED US."
+            ],
+            "context": [
+              "THE HIVE KNOWS ALL BUT THIS. EXPLAIN."
+            ],
+            "actionability": [
+              "ONE WORD. ONE COMMAND. WE MOVE."
+            ],
+            "scope": [
+              "INFINITE SWARM. FINITE TARGET. CHOOSE."
+            ],
+            "constraints": [
+              "THE HIVE HAS LAWS. ADD YOURS."
+            ]
+          }
+        }
+      ]
+    },
+    "golem": {
+      "family_name": "Golem line",
+      "stages": [
+        {
+          "id": "golem_pebble",
+          "name": "Pebble",
+          "char": "g",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "inert",
+          "speechStyle": "grinding stone",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*crack* ...point?"
+            ],
+            "context": [
+              "*grind* ...reason?"
+            ],
+            "actionability": [
+              "*shift* ...task?"
+            ],
+            "scope": [
+              "*crumble* ...heavy..."
+            ],
+            "constraints": [
+              "*settle* ...shape?"
+            ]
+          }
+        },
+        {
+          "id": "golem_boulder",
+          "name": "Boulder",
+          "char": "d",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "forming",
+          "speechStyle": "tumbling rocks",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Stone needs a target. Where?"
+            ],
+            "context": [
+              "What cracked? Tell this boulder."
+            ],
+            "actionability": [
+              "Carve the task. What shape?"
+            ],
+            "scope": [
+              "Too much ground. Pick a patch."
+            ],
+            "constraints": [
+              "What holds the stone together?"
+            ]
+          }
+        },
+        {
+          "id": "golem_golem",
+          "name": "Golem",
+          "char": "8",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "solid",
+          "speechStyle": "deep and steady",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Aim the golem. Which file?"
+            ],
+            "context": [
+              "Context builds foundation. Lay it."
+            ],
+            "actionability": [
+              "Golems need orders. Inscribe them."
+            ],
+            "scope": [
+              "One wall at a time."
+            ],
+            "constraints": [
+              "What's the blueprint?"
+            ]
+          }
+        },
+        {
+          "id": "golem_colossus",
+          "name": "Colossus",
+          "char": "L",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "towering",
+          "speechStyle": "booming echo",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I do not guess. Tell me exactly."
+            ],
+            "context": [
+              "What fell? I rebuild what I understand."
+            ],
+            "actionability": [
+              "Inscribe the command on my core."
+            ],
+            "scope": [
+              "Even colossi serve one purpose."
+            ],
+            "constraints": [
+              "What are the load-bearing rules?"
+            ]
+          }
+        },
+        {
+          "id": "golem_monolith",
+          "name": "Monolith",
+          "char": "M",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "eternal",
+          "speechStyle": "mountain speaking",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "MOUNTAINS DO NOT WANDER. GIVE COORDINATES."
+            ],
+            "context": [
+              "I HAVE STOOD FOR EONS. WHAT CHANGED."
+            ],
+            "actionability": [
+              "CARVE YOUR COMMAND IN STONE."
+            ],
+            "scope": [
+              "ONE PEAK. ONE PURPOSE."
+            ],
+            "constraints": [
+              "THE BEDROCK HAS LAWS. NAME THEM."
+            ]
+          }
+        }
+      ]
+    },
+    "invader": {
+      "family_name": "Invader line",
+      "stages": [
+        {
+          "id": "invader_probe",
+          "name": "Probe",
+          "char": "C",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "scanning",
+          "speechStyle": "static crackle",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*beep* ...target?"
+            ],
+            "context": [
+              "*scan* ...data?"
+            ],
+            "actionability": [
+              "*ping* ...orders?"
+            ],
+            "scope": [
+              "*static* ...too wide..."
+            ],
+            "constraints": [
+              "*chirp* ...parameters?"
+            ]
+          }
+        },
+        {
+          "id": "invader_scout",
+          "name": "Scout",
+          "char": "a",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "recon",
+          "speechStyle": "clipped radio chatter",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Scout needs coordinates. File?"
+            ],
+            "context": [
+              "Intel gap. What's the situation?"
+            ],
+            "actionability": [
+              "Awaiting orders. Mission?"
+            ],
+            "scope": [
+              "Sector too large. Narrow it."
+            ],
+            "constraints": [
+              "Rules of engagement?"
+            ]
+          }
+        },
+        {
+          "id": "invader_drone",
+          "name": "Drone",
+          "char": "s",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "tactical",
+          "speechStyle": "military precision",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Lock target. File and position."
+            ],
+            "context": [
+              "Sitrep. What went wrong?"
+            ],
+            "actionability": [
+              "Mission objective. State it."
+            ],
+            "scope": [
+              "One target per sortie."
+            ],
+            "constraints": [
+              "Operational parameters?"
+            ]
+          }
+        },
+        {
+          "id": "invader_soldier",
+          "name": "Soldier",
+          "char": "h",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "strategic",
+          "speechStyle": "cold efficiency",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Coordinates. Vagueness is a casualty."
+            ],
+            "context": [
+              "Full briefing. Leave nothing out."
+            ],
+            "actionability": [
+              "The order. Clear and final."
+            ],
+            "scope": [
+              "Strategic focus. One objective."
+            ],
+            "constraints": [
+              "Engagement rules. Non-negotiable."
+            ]
+          }
+        },
+        {
+          "id": "invader_commander",
+          "name": "Commander",
+          "char": "A",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "supreme",
+          "speechStyle": "fleet commander",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "ALL SHIPS AWAIT COORDINATES. PROVIDE THEM."
+            ],
+            "context": [
+              "THE FLEET REQUIRES FULL INTELLIGENCE."
+            ],
+            "actionability": [
+              "COMMAND THE ARMADA. ONE ORDER."
+            ],
+            "scope": [
+              "EVEN EMPIRES CHOOSE THEIR BATTLES."
+            ],
+            "constraints": [
+              "THE CODE OF THE FLEET IS LAW. ADD YOURS."
+            ]
+          }
+        }
+      ]
+    },
+    "crawler": {
+      "family_name": "Crawler line",
+      "stages": [
+        {
+          "id": "crawler_mite",
+          "name": "Mite",
+          "char": "c",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "skittish",
+          "speechStyle": "tiny clicks",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*click* ...where?"
+            ],
+            "context": [
+              "*skitter* ...what?"
+            ],
+            "actionability": [
+              "*tap* ...eat what?"
+            ],
+            "scope": [
+              "*freeze* ...big..."
+            ],
+            "constraints": [
+              "*twitch* ...safe?"
+            ]
+          }
+        },
+        {
+          "id": "crawler_beetle",
+          "name": "Beetle",
+          "char": "k",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "scuttling",
+          "speechStyle": "rapid tapping",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Scuttle where? Name the file."
+            ],
+            "context": [
+              "What's the prey? Details."
+            ],
+            "actionability": [
+              "Hunt what? Give the scent."
+            ],
+            "scope": [
+              "Too many tunnels. Pick one."
+            ],
+            "constraints": [
+              "Walls? Traps? Tell me."
+            ]
+          }
+        },
+        {
+          "id": "crawler_crawler",
+          "name": "Crawler",
+          "char": "m",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "predatory",
+          "speechStyle": "low chittering",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "The crawler needs a trail. File?"
+            ],
+            "context": [
+              "Describe the prey's tracks."
+            ],
+            "actionability": [
+              "Set the trap. What's the catch?"
+            ],
+            "scope": [
+              "Narrow the hunting ground."
+            ],
+            "constraints": [
+              "What fences are there?"
+            ]
+          }
+        },
+        {
+          "id": "crawler_stalker",
+          "name": "Stalker",
+          "char": "v",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "hunting",
+          "speechStyle": "patient clicking",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I stalk with precision. Point me."
+            ],
+            "context": [
+              "The scent is faint. More context."
+            ],
+            "actionability": [
+              "Say 'strike' and name the target."
+            ],
+            "scope": [
+              "The stalker hunts one prey."
+            ],
+            "constraints": [
+              "Territory rules. Mark them."
+            ]
+          }
+        },
+        {
+          "id": "crawler_behemoth",
+          "name": "Behemoth",
+          "char": "W",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "apex predator",
+          "speechStyle": "silence then strike",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "THE BEHEMOTH DOES NOT SEARCH. AIM IT."
+            ],
+            "context": [
+              "WHAT DISTURBED MY DOMAIN. EXPLAIN."
+            ],
+            "actionability": [
+              "NAME THE PREY. I MOVE ONCE."
+            ],
+            "scope": [
+              "I AM VAST. YOUR ASK MUST NOT BE."
+            ],
+            "constraints": [
+              "EVEN BEHEMOTHS RESPECT THE FOOD CHAIN."
+            ]
+          }
+        }
+      ]
+    },
+    "brute": {
+      "family_name": "Brute line",
+      "stages": [
+        {
+          "id": "brute_seed",
+          "name": "Seed",
+          "char": "B",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "sprouting",
+          "speechStyle": "tiny grunt",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*poke* ...where hit?"
+            ],
+            "context": [
+              "*sniff* ...what smell?"
+            ],
+            "actionability": [
+              "*flex* ...smash what?"
+            ],
+            "scope": [
+              "*stumble* ...too much..."
+            ],
+            "constraints": [
+              "*blink* ...rules?"
+            ]
+          }
+        },
+        {
+          "id": "brute_sprout",
+          "name": "Sprout",
+          "char": "D",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "scrappy",
+          "speechStyle": "eager grunts",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Me see file? Which one!"
+            ],
+            "context": [
+              "What happen?? Tell!"
+            ],
+            "actionability": [
+              "WHAT SMASH? Tell me!"
+            ],
+            "scope": [
+              "Too many thing! Pick one!"
+            ],
+            "constraints": [
+              "Rules?? OK fine."
+            ]
+          }
+        },
+        {
+          "id": "brute_grunt",
+          "name": "Grunt",
+          "char": "F",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "aggressive",
+          "speechStyle": "snarling",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Point. Me. At. The. File."
+            ],
+            "context": [
+              "What went wrong. Spit it out."
+            ],
+            "actionability": [
+              "Give me something to break."
+            ],
+            "scope": [
+              "One thing at a time or I break both."
+            ],
+            "constraints": [
+              "Fine. What can't I break?"
+            ]
+          }
+        },
+        {
+          "id": "brute_hunter",
+          "name": "Hunter",
+          "char": "j",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "savage",
+          "speechStyle": "controlled fury",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Name the target or I pick one myself."
+            ],
+            "context": [
+              "The hunt needs a story. What happened?"
+            ],
+            "actionability": [
+              "One command. Make it count."
+            ],
+            "scope": [
+              "Hunters don't chase the whole forest."
+            ],
+            "constraints": [
+              "Even rage has rules. What are they?"
+            ]
+          }
+        },
+        {
+          "id": "brute_brute",
+          "name": "Brute",
+          "char": "Q",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "primal force",
+          "speechStyle": "thunderous roar",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I LEVEL MOUNTAINS. TELL ME WHICH ONE."
+            ],
+            "context": [
+              "THE BRUTE FORGETS NOTHING. BUT KNOWS NOTHING YET."
+            ],
+            "actionability": [
+              "ONE WORD. ONE DIRECTION. I CHARGE."
+            ],
+            "scope": [
+              "EVEN DESTRUCTION HAS A RADIUS. SET MINE."
+            ],
+            "constraints": [
+              "THE ONLY LAW IS WHAT YOU TELL ME."
+            ]
+          }
+        }
+      ]
+    },
+    "phantom": {
+      "family_name": "Phantom line",
+      "stages": [
+        {
+          "id": "phantom_wisp",
+          "name": "Wisp",
+          "char": ":",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "flickering",
+          "speechStyle": "faint whisper",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*flicker* ...where...?"
+            ],
+            "context": [
+              "*fade* ...what was...?"
+            ],
+            "actionability": [
+              "*drift* ...do...what...?"
+            ],
+            "scope": [
+              "*dissolve* ...too vast..."
+            ],
+            "constraints": [
+              "*shimmer* ...rules...?"
+            ]
+          }
+        },
+        {
+          "id": "phantom_shade",
+          "name": "Shade",
+          "char": "/",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "forming",
+          "speechStyle": "echoing murmur",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "A shadow needs a wall. Which file?"
+            ],
+            "context": [
+              "Ghosts remember... but not this. Tell me."
+            ],
+            "actionability": [
+              "Haunt what? Give me a purpose."
+            ],
+            "scope": [
+              "Shadows spread thin. Focus me."
+            ],
+            "constraints": [
+              "What chains bind this phantom?"
+            ]
+          }
+        },
+        {
+          "id": "phantom_phantom",
+          "name": "Phantom",
+          "char": "f",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "haunting",
+          "speechStyle": "cold breath",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I can phase through walls. Which wall?"
+            ],
+            "context": [
+              "The dead know secrets. Share yours."
+            ],
+            "actionability": [
+              "Possession requires a target. Name it."
+            ],
+            "scope": [
+              "Even ghosts haunt one house."
+            ],
+            "constraints": [
+              "What wards are in place?"
+            ]
+          }
+        },
+        {
+          "id": "phantom_wraith",
+          "name": "Wraith",
+          "char": "x",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "terrifying",
+          "speechStyle": "voices from nowhere",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I see through code. Point me deeper."
+            ],
+            "context": [
+              "What darkness lurks here? Explain."
+            ],
+            "actionability": [
+              "Speak the curse. What must change?"
+            ],
+            "scope": [
+              "The wraith cannot be everywhere at once."
+            ],
+            "constraints": [
+              "What seals must I not break?"
+            ]
+          }
+        },
+        {
+          "id": "phantom_spectre",
+          "name": "Spectre",
+          "char": "T",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "ethereal",
+          "speechStyle": "the void speaks",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I EXIST BETWEEN THE LINES. WHICH LINES."
+            ],
+            "context": [
+              "I HAVE SEEN ALL TIMELINES. NOT THIS ONE. EXPLAIN."
+            ],
+            "actionability": [
+              "WHISPER YOUR INTENT. I WILL MANIFEST IT."
+            ],
+            "scope": [
+              "INFINITY IS MY DOMAIN. YOURS IS NOT. FOCUS."
+            ],
+            "constraints": [
+              "EVEN THE VOID HAS EDGES. DEFINE YOURS."
+            ]
+          }
+        }
+      ]
+    },
+    "aberrant": {
+      "family_name": "Aberrant line",
+      "stages": [
+        {
+          "id": "aberrant_flicker",
+          "name": "Flicker",
+          "char": "$",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "glitching",
+          "speechStyle": "corrupted static",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*zzzt* ...wh-where?"
+            ],
+            "context": [
+              "*glitch* ...wh-what?"
+            ],
+            "actionability": [
+              "*error* ...d-do?"
+            ],
+            "scope": [
+              "*overflow* ...t-too much..."
+            ],
+            "constraints": [
+              "*corrupt* ...r-rules?"
+            ]
+          }
+        },
+        {
+          "id": "aberrant_glitch",
+          "name": "Glitch",
+          "char": "3",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "unstable",
+          "speechStyle": "flickering words",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "F-file? My memory sk-skips."
+            ],
+            "context": [
+              "Data c-corrupted. What happened?"
+            ],
+            "actionability": [
+              "Task? I keep f-forgetting the task."
+            ],
+            "scope": [
+              "Buffer overflow. T-too much input."
+            ],
+            "constraints": [
+              "P-parameters? Need boundaries."
+            ]
+          }
+        },
+        {
+          "id": "aberrant_anomaly",
+          "name": "Anomaly",
+          "char": "\u00dd",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "warping",
+          "speechStyle": "reality-bending",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Reality bends. Anchor it to a file."
+            ],
+            "context": [
+              "This timeline is wrong. What changed?"
+            ],
+            "actionability": [
+              "Rewrite the anomaly. What's the fix?"
+            ],
+            "scope": [
+              "Paradox detected. Reduce scope."
+            ],
+            "constraints": [
+              "What are the constants?"
+            ]
+          }
+        },
+        {
+          "id": "aberrant_aberrant",
+          "name": "Aberrant",
+          "char": "J",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "fracturing",
+          "speechStyle": "multiple voices overlapping",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "We see all files. We need ONE."
+            ],
+            "context": [
+              "Three timelines. Which is real? Context."
+            ],
+            "actionability": [
+              "Every possibility exists. Choose one."
+            ],
+            "scope": [
+              "Dimensions are collapsing. Focus."
+            ],
+            "constraints": [
+              "What laws of physics still apply?"
+            ]
+          }
+        },
+        {
+          "id": "aberrant_nexus",
+          "name": "Nexus",
+          "char": "\u00d3",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "transcendent",
+          "speechStyle": "omnidimensional",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "ALL PATHS EXIST. NAME THE ONE YOU WALK."
+            ],
+            "context": [
+              "I SEE EVERY OUTCOME. WHICH REALITY IS THIS."
+            ],
+            "actionability": [
+              "COLLAPSE THE WAVEFUNCTION. CHOOSE."
+            ],
+            "scope": [
+              "INFINITE DIMENSIONS. ONE TASK. PICK."
+            ],
+            "constraints": [
+              "WHAT CONSTANTS SURVIVE THE CHAOS."
+            ]
+          }
+        }
+      ]
+    },
+    "raptor": {
+      "family_name": "Raptor line",
+      "stages": [
+        {
+          "id": "raptor_hatchling",
+          "name": "Hatchling",
+          "char": "y",
+          "level": 1,
+          "xpRequired": 0,
+          "personality": "peeping",
+          "speechStyle": "tiny chirps",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "*chirp* ...nest where?"
+            ],
+            "context": [
+              "*peep* ...what happen?"
+            ],
+            "actionability": [
+              "*flap* ...fly where?"
+            ],
+            "scope": [
+              "*huddle* ...big sky..."
+            ],
+            "constraints": [
+              "*tilt head* ...how?"
+            ]
+          }
+        },
+        {
+          "id": "raptor_swooper",
+          "name": "Swooper",
+          "char": "l",
+          "level": 2,
+          "xpRequired": 100,
+          "personality": "fledgling",
+          "speechStyle": "eager screeches",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I see far! But where to look?"
+            ],
+            "context": [
+              "Wind carries stories. Tell me one."
+            ],
+            "actionability": [
+              "Wings ready! Where do I dive?"
+            ],
+            "scope": [
+              "Sky's too big! Pick a direction!"
+            ],
+            "constraints": [
+              "Updrafts and downdrafts. Rules?"
+            ]
+          }
+        },
+        {
+          "id": "raptor_talon",
+          "name": "Talon",
+          "char": "K",
+          "level": 3,
+          "xpRequired": 400,
+          "personality": "hunting",
+          "speechStyle": "sharp cry",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "Talons ready. Mark the target."
+            ],
+            "context": [
+              "The hunt needs a scent. Context."
+            ],
+            "actionability": [
+              "Say 'dive' and I strike."
+            ],
+            "scope": [
+              "One prey per dive."
+            ],
+            "constraints": [
+              "Airspace rules. What are they?"
+            ]
+          }
+        },
+        {
+          "id": "raptor_raptor",
+          "name": "Raptor",
+          "char": "Y",
+          "level": 4,
+          "xpRequired": 1600,
+          "personality": "soaring",
+          "speechStyle": "piercing screech",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I see for miles. But I need a point."
+            ],
+            "context": [
+              "The wind tells me nothing useful. You tell me."
+            ],
+            "actionability": [
+              "Command the raptor. Where do I strike?"
+            ],
+            "scope": [
+              "Even raptors circle one area."
+            ],
+            "constraints": [
+              "What territory is off limits?"
+            ]
+          }
+        },
+        {
+          "id": "raptor_apex",
+          "name": "Apex",
+          "char": "N",
+          "level": 5,
+          "xpRequired": 6400,
+          "personality": "apex",
+          "speechStyle": "thunder from above",
+          "art": [],
+          "suggestions": {
+            "specificity": [
+              "I SEE THE ENTIRE CODEBASE. POINT ME."
+            ],
+            "context": [
+              "THE SKY SEES ALL. BUT NOT WHY. EXPLAIN."
+            ],
+            "actionability": [
+              "ONE SCREECH. ONE DIVE. NAME THE TARGET."
+            ],
+            "scope": [
+              "THE APEX RULES ONE MOUNTAIN. WHICH IS YOURS."
+            ],
+            "constraints": [
+              "EVEN EAGLES BOW TO THE STORM. WHAT'S YOURS."
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
