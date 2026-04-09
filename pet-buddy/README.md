@@ -3,12 +3,9 @@
 An evolving pixel-art pet companion for Claude Code that scores your prompt quality and awards XP.
 
 ```
-█▀▀▀█
- ███
-▀███▀     Pet: Larva  ♥ 42/100 XP
-▄███▄
- █ █
- ▀ ▀
+▄█▄█▄
+█▄█▄█     Pet: Probe  ♥ 42/100 XP
+▀█▀█▀
 ```
 
 ## Quick Start
