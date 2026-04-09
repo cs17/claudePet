@@ -1,7 +1,7 @@
 import type { PromptScore } from "../types.js";
 
-// Safe from ReDoS: no nested quantifiers, no overlapping character classes
-const FILE_PATH_PATTERN = /\b[\w][\w/\\-]{0,200}\.(?:ts|js|tsx|jsx|py|rs|go|java|rb|css|html|json|yaml|yml|md|sh|sql|toml)\b|(?:line\s*\d+)|(?::\d+)/gi;
+const FILE_EXT_PATTERN = /\b\w[\w/\\-]{0,200}\.(?:ts|js|tsx|jsx|py|rs|go|java|rb|css|html|json|yaml|yml|md|sh|sql|toml)\b/gi;
+const LINE_REF_PATTERN = /(?:line\s*\d+)|(?::\d+)/gi;
 const FUNCTION_PATTERN = /(?:function|method|class|variable|const|let|var)\s+\w+|\w+\(\)/gi;
 const ACTION_VERBS = /\b(fix|refactor|add|create|remove|delete|update|change|move|rename|extract|implement|write|build|test|debug|optimize|replace|migrate|convert|split|merge|wrap)\b/gi;
 const CONTEXT_MARKERS = /\b(because|currently|expected|actual|instead|but|however|when|after|before|error|returns|throws|fails|broken|wrong|should)\b/gi;
@@ -19,7 +19,8 @@ function countMatches(text: string, pattern: RegExp): number {
 
 function scoreSpecificity(text: string): number {
   let score = 0;
-  score += Math.min(countMatches(text, FILE_PATH_PATTERN) * 5, 12);
+  const fileRefs = countMatches(text, FILE_EXT_PATTERN) + countMatches(text, LINE_REF_PATTERN);
+  score += Math.min(fileRefs * 5, 12);
   score += Math.min(countMatches(text, FUNCTION_PATTERN) * 4, 8);
   return clamp(score, 0, 20);
 }

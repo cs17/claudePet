@@ -1,4 +1,4 @@
-import { randomInt } from "crypto";
+import { randomInt } from "node:crypto";
 import { scorePrompt, xpForScore } from "../engine/scorer.js";
 import { awardXp, checkEvolution, checkMilestones } from "../engine/evolution.js";
 import { renderPet, renderEvolution } from "../engine/renderer.js";

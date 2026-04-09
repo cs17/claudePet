@@ -2,7 +2,7 @@
 // score-prompt.js — Called by pet-hook.sh to score the user's prompt directly.
 // Reads prompt from stdin, scores it, awards XP, writes last-activity for statusline.
 
-import { randomInt } from "crypto";
+import { randomInt } from "node:crypto";
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
