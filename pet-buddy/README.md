@@ -1,6 +1,6 @@
 # Pet Buddy
 
-An evolving pixel-art pet companion for Claude Code that scores your prompt quality and awards XP.
+> An evolving pixel-art pet companion for Claude Code that lives in your status line, scores your prompts, and grows stronger as you write better code.
 
 ```
 ▄█▄█▄
@@ -11,12 +11,12 @@ An evolving pixel-art pet companion for Claude Code that scores your prompt qual
 ## Quick Start
 
 ```bash
-git clone https://github.com/user/pet-buddy.git
-cd pet-buddy/pet-buddy
+git clone https://github.com/cs17/claudePet.git
+cd claudePet/pet-buddy
 ./install.sh
 ```
 
-Then restart Claude Code.
+Then restart Claude Code. Your pet appears in the status line.
 
 ## What You Get
 
@@ -63,16 +63,24 @@ Each prompt is scored 0-20 per dimension (max 100 total):
 - `/pet status` — check XP, level, streak
 - `/pet reset` — reset with a random new family
 
-## MCP Tools
+## Requirements
 
-| Tool | Description |
-|------|-------------|
-| `analyze_prompt` | Score a prompt, award XP, get suggestions |
-| `get_pet_status` | See level, XP, personality |
-| `log_activity` | Bonus XP for commits, tests, PRs |
-| `get_evolution_history` | View evolution timeline |
+- Node.js 20+
+- Claude Code CLI (`claude`)
+- `jq` (for status line rendering)
+- **Dark terminal theme** — pixel creatures use Unicode block characters that are invisible on light backgrounds
 
-## What install.sh Does
+## Uninstall
+
+```bash
+claude mcp remove pet-buddy
+rm -rf ~/.claude/pet-buddy ~/.claude/skills/pet
+```
+
+Remove the `UserPromptSubmit` hook and `statusLine` entries from `~/.claude/settings.json`.
+
+<details>
+<summary>What install.sh does</summary>
 
 1. Checks prerequisites (Node.js, jq)
 2. `npm install && npm run build`
@@ -82,30 +90,31 @@ Each prompt is scored 0-20 per dimension (max 100 total):
 6. Copies data files and `/pet` skill to `~/.claude/`
 7. Randomly assigns a creature family
 
-## Data
+</details>
+
+<details>
+<summary>MCP Tools (advanced)</summary>
+
+| Tool | Description |
+|------|-------------|
+| `analyze_prompt` | Score a prompt, award XP, get suggestions |
+| `get_pet_status` | See level, XP, personality |
+| `log_activity` | Bonus XP for commits, tests, PRs |
+| `get_evolution_history` | View evolution timeline |
+
+</details>
+
+<details>
+<summary>Data files</summary>
 
 Pet state persists in `~/.claude/pet-buddy/`:
 - `state.json` — XP, level, streaks, milestones, assigned family
 - `sprites.json` — block-art creature sprites
-- `creatures.json` — generated creature registry
+- `creatures.json` — creature registry
 - `config.json` — display toggle
 - `prompt-history.json` — last 50 scored prompts
 
-## Requirements
-
-- Node.js 20+
-- Claude Code CLI (`claude`)
-- `jq` (for status line rendering)
-- **Dark terminal theme** — the pixel creatures use Unicode block characters which render in your terminal's foreground color. On light backgrounds they appear washed out or invisible.
-
-## Uninstall
-
-```bash
-claude mcp remove pet-buddy
-rm -rf ~/.claude/pet-buddy ~/.claude/skills/pet
-```
-
-Remove the hook and statusLine entries from `~/.claude/settings.json`.
+</details>
 
 ## Credits
 
@@ -115,5 +124,5 @@ Creature pixel art derived from [MonstaPix](http://fontstruct.com/fontstructions
 
 This project is non-commercial and open source.
 
-- **Code:** MIT License (see [LICENSE](../LICENSE))
+- **Code:** [MIT License](https://github.com/cs17/claudePet/blob/main/LICENSE)
 - **Creature sprites:** [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/) — derived from MonstaPix by Ken Bruce
