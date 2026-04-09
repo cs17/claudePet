@@ -1,6 +1,7 @@
 import type { PromptScore } from "../types.js";
 
-const FILE_PATH_PATTERN = /(?:[\w/\\-]+(?:\.[\w/\\-]+)*\.\w{1,5})|(?:line\s*\d+)|(?::\d+)/gi;
+// Safe from ReDoS: no nested quantifiers, no overlapping character classes
+const FILE_PATH_PATTERN = /\b[\w][\w/\\-]{0,200}\.(?:ts|js|tsx|jsx|py|rs|go|java|rb|css|html|json|yaml|yml|md|sh|sql|toml)\b|(?:line\s*\d+)|(?::\d+)/gi;
 const FUNCTION_PATTERN = /(?:function|method|class|variable|const|let|var)\s+\w+|\w+\(\)/gi;
 const ACTION_VERBS = /\b(fix|refactor|add|create|remove|delete|update|change|move|rename|extract|implement|write|build|test|debug|optimize|replace|migrate|convert|split|merge|wrap)\b/gi;
 const CONTEXT_MARKERS = /\b(because|currently|expected|actual|instead|but|however|when|after|before|error|returns|throws|fails|broken|wrong|should)\b/gi;
