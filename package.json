@@ -1,7 +1,7 @@
 {
-  "name": "pet-buddy",
+  "name": "claude-pet",
   "version": "0.1.0",
-  "description": "Evolving pet companion for Claude Code that scores prompt quality",
+  "description": "Evolving pixel-art pet companion for Claude Code",
   "type": "module",
   "main": "dist/server.js",
   "scripts": {

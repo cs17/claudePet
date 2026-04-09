@@ -1,4 +1,4 @@
-# Pet Buddy
+# Claude Pet
 
 > An evolving pixel-art pet companion for Claude Code that lives in your status line, scores your prompts, and grows stronger as you write better code.
 
@@ -12,7 +12,7 @@
 
 ```bash
 git clone https://github.com/cs17/claudePet.git
-cd claudePet/pet-buddy
+cd claudePet
 ./install.sh
 ```
 
@@ -73,7 +73,7 @@ Each prompt is scored 0-20 per dimension (max 100 total):
 ## Uninstall
 
 ```bash
-claude mcp remove pet-buddy
+claude mcp remove claude-pet
 rm -rf ~/.claude/pet-buddy ~/.claude/skills/pet
 ```
 
@@ -124,5 +124,5 @@ Creature pixel art derived from [MonstaPix](http://fontstruct.com/fontstructions
 
 This project is non-commercial and open source.
 
-- **Code:** [MIT License](https://github.com/cs17/claudePet/blob/main/LICENSE)
+- **Code:** [MIT License](LICENSE)
 - **Creature sprites:** [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/) — derived from MonstaPix by Ken Bruce

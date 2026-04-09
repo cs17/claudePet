@@ -6,7 +6,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PET_DATA_DIR="$HOME/.claude/pet-buddy"
+PET_DATA_DIR="$HOME/.claude/claude-pet"
 SETTINGS_FILE="$HOME/.claude/settings.json"
 SERVER_PATH="$SCRIPT_DIR/dist/server.js"
 HOOK_PATH="$SCRIPT_DIR/scripts/pet-hook.sh"
@@ -90,15 +90,15 @@ echo "  Data files ready."
 echo "[4/5] Configuring Claude Code..."
 
 if command -v claude &> /dev/null; then
-  # Remove existing pet-buddy server if present (idempotent reinstall)
-  claude mcp remove pet-buddy 2>/dev/null || true
-  claude mcp add --transport stdio pet-buddy -- node "$SERVER_PATH" 2>&1 && \
+  # Remove existing claude-pet server if present (idempotent reinstall)
+  claude mcp remove claude-pet 2>/dev/null || true
+  claude mcp add --transport stdio claude-pet -- node "$SERVER_PATH" 2>&1 && \
     echo "  MCP server registered." || \
     { echo "  Warning: Could not register MCP server. Run manually:"; \
-      echo "    claude mcp add --transport stdio pet-buddy -- node $SERVER_PATH"; }
+      echo "    claude mcp add --transport stdio claude-pet -- node $SERVER_PATH"; }
 else
   echo "  Warning: 'claude' CLI not found. Add the MCP server manually:"
-  echo "    claude mcp add --transport stdio pet-buddy -- node $SERVER_PATH"
+  echo "    claude mcp add --transport stdio claude-pet -- node $SERVER_PATH"
 fi
 
 # ── Step 4: Add hook + status line to settings ────────────────────────────────

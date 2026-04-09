@@ -20,7 +20,7 @@ const registry: CreatureRegistry = JSON.parse(
 );
 
 const server = new McpServer({
-  name: "pet-buddy",
+  name: "claude-pet",
   version: "0.1.0",
 });
 
