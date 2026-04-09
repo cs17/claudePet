@@ -1,3 +1,4 @@
+import { randomInt } from "crypto";
 import { scorePrompt, xpForScore } from "../engine/scorer.js";
 import { awardXp, checkEvolution, checkMilestones } from "../engine/evolution.js";
 import { renderPet, renderEvolution } from "../engine/renderer.js";
@@ -81,7 +82,7 @@ export function handleAnalyzePrompt(
   dims.sort((a, b) => a[1] - b[1]);
   const weakest = dims[0][0] as keyof typeof currentStage.suggestions;
   const suggestions = currentStage.suggestions[weakest];
-  const speech = suggestions[Math.floor(Math.random() * suggestions.length)];
+  const speech = suggestions[randomInt(suggestions.length)];
 
   const display = renderPet(currentStage, state.xp, xpNext, speech, milestones);
 

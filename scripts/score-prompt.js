@@ -2,6 +2,7 @@
 // score-prompt.js — Called by pet-hook.sh to score the user's prompt directly.
 // Reads prompt from stdin, scores it, awards XP, writes last-activity for statusline.
 
+import { randomInt } from "crypto";
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -81,7 +82,7 @@ async function main() {
       dims.sort((a, b) => a[1] - b[1]);
       const weakest = dims[0][0];
       const suggestions = currentStage.suggestions[weakest];
-      message = suggestions[Math.floor(Math.random() * suggestions.length)];
+      message = suggestions[randomInt(suggestions.length)];
     }
 
     // Save state

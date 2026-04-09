@@ -1,6 +1,6 @@
 import type { PromptScore } from "../types.js";
 
-const FILE_PATH_PATTERN = /(?:[\w./\\-]+\.\w{1,5})|(?:line\s*\d+)|(?::\d+)/gi;
+const FILE_PATH_PATTERN = /(?:[\w/\\-]+(?:\.[\w/\\-]+)*\.\w{1,5})|(?:line\s*\d+)|(?::\d+)/gi;
 const FUNCTION_PATTERN = /(?:function|method|class|variable|const|let|var)\s+\w+|\w+\(\)/gi;
 const ACTION_VERBS = /\b(fix|refactor|add|create|remove|delete|update|change|move|rename|extract|implement|write|build|test|debug|optimize|replace|migrate|convert|split|merge|wrap)\b/gi;
 const CONTEXT_MARKERS = /\b(because|currently|expected|actual|instead|but|however|when|after|before|error|returns|throws|fails|broken|wrong|should)\b/gi;
