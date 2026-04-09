@@ -1,5 +1,7 @@
 # Claude Pet
 
+[![Known Vulnerabilities](https://snyk.io/test/github/cs17/claudePet/badge.svg)](https://snyk.io/test/github/cs17/claudePet)
+
 > An evolving pixel-art pet companion for Claude Code that lives in your status line, scores your prompts, and grows stronger as you write better code.
 
 ```
