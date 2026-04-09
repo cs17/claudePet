@@ -1,12 +1,12 @@
 #!/bin/bash
-# Pet Buddy Installer
+# Claude Pet Installer
 # Builds the project and configures Claude Code: MCP server, hook, status line, and data files.
 # Works for any user on any machine — no hardcoded paths.
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PET_DATA_DIR="$HOME/.claude/claude-pet"
+PET_DATA_DIR="$HOME/.claude/pet-buddy"
 SETTINGS_FILE="$HOME/.claude/settings.json"
 SERVER_PATH="$SCRIPT_DIR/dist/server.js"
 HOOK_PATH="$SCRIPT_DIR/scripts/pet-hook.sh"
@@ -14,7 +14,7 @@ STATUSLINE_PATH="$SCRIPT_DIR/scripts/pet-statusline.sh"
 
 echo ""
 echo "  ▄█▀██▀█▄"
-echo "  ▀█▀█▀███   Pet Buddy Installer"
+echo "  ▀█▀█▀███   Claude Pet Installer"
 echo "   ▄▄▄▄███"
 echo "  ▀██████"
 echo ""
@@ -182,5 +182,5 @@ echo "  Restart Claude Code, then try:"
 echo "    • Type /pet status"
 echo "    • Type /pet off to hide"
 echo ""
-echo "  Your Wobble Egg is waiting! 🥚"
+echo "  Your creature is waiting!"
 echo ""
