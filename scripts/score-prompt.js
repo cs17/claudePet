@@ -11,7 +11,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import { homedir } from "os";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -55,8 +55,12 @@ const prompt = readPrompt();
 
 if (prompt) {
   try {
-    const { StateManager } = await import(resolve(DIST_DIR, "engine", "state.js"));
-    const { handleAnalyzePrompt } = await import(resolve(DIST_DIR, "tools", "analyze-prompt.js"));
+    // Node's ESM loader rejects a Windows drive path as a bare specifier
+    // (ERR_UNSUPPORTED_ESM_URL_SCHEME); import through a file:// URL instead.
+    const distModule = (relative) =>
+      pathToFileURL(resolve(DIST_DIR, relative)).href;
+    const { StateManager } = await import(distModule("engine/state.js"));
+    const { handleAnalyzePrompt } = await import(distModule("tools/analyze-prompt.js"));
     const registry = JSON.parse(
       readFileSync(resolve(DIST_DIR, "data", "creatures.json"), "utf-8")
     );
