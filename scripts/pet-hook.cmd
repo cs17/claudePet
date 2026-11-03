@@ -1,5 +1,7 @@
 @echo off
 setlocal
+rem Cursor loads Claude Code hooks too; the pet is Claude Code-only.
+if defined CURSOR_VERSION exit /b 0
 rem A bare .sh hook command is resolved through the Windows file association,
 rem which pops a "choose an app" dialog instead of running it. Start the
 rem console-subsystem bash.exe explicitly so stdin and stdout stay connected.
