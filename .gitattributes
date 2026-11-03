@@ -6,6 +6,7 @@
 *.ts            text eol=lf
 *.py            text eol=lf
 *.md            text eol=lf
+*.cmd           text eol=crlf
 .gitattributes  text eol=lf
 
 *.png           binary

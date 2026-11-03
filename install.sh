@@ -13,6 +13,12 @@ PET_DATA_DIR="$HOME/.claude/claude-pet"
 SETTINGS_FILE="$HOME/.claude/settings.json"
 SERVER_PATH="$SCRIPT_DIR/dist/server.js"
 HOOK_PATH="$SCRIPT_DIR/scripts/pet-hook.sh"
+# Native Windows resolves a bare .sh command through the file association, which
+# pops a "choose an app" dialog instead of running the hook. The .cmd launcher
+# starts bash.exe itself and keeps stdin/stdout connected.
+case "$(uname -s 2>/dev/null)" in
+  MINGW*|MSYS*|CYGWIN*) HOOK_PATH="$SCRIPT_DIR/scripts/pet-hook.cmd" ;;
+esac
 STATUSLINE_PATH="$SCRIPT_DIR/scripts/pet-statusline.sh"
 
 # ── Path handling ─────────────────────────────────────────────────────────────
@@ -279,9 +285,18 @@ else
     // Add hook
     if (!settings.hooks) settings.hooks = {};
     if (!settings.hooks.UserPromptSubmit) settings.hooks.UserPromptSubmit = [];
-    const hasHook = settings.hooks.UserPromptSubmit.some(
-      h => h.hooks && h.hooks.some(hh => hh.command && hh.command.includes("pet-hook"))
-    );
+    // Replace an older hook path in place -- notably a bare .sh entry on
+    // Windows -- instead of leaving it beside the new one.
+    let hasHook = false;
+    for (const group of settings.hooks.UserPromptSubmit) {
+      if (!group.hooks) continue;
+      for (const h of group.hooks) {
+        if (typeof h.command === "string" && h.command.includes("pet-hook")) {
+          h.command = hookCmd;
+          hasHook = true;
+        }
+      }
+    }
     if (!hasHook) {
       settings.hooks.UserPromptSubmit.push({
         matcher: "",

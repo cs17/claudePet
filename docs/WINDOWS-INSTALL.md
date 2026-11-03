@@ -127,5 +127,5 @@ jq               D:\Program Files\Git\usr\bin\jq.exe
 checkout         E:\local-ai\claude\claudePet
 settings.json    C:\Users\<you>\.claude\settings.json
 statusLine       E:/local-ai/claude/claudePet/scripts/pet-statusline.sh
-hook             E:/local-ai/claude/claudePet/scripts/pet-hook.sh
+hook             E:/local-ai/claude/claudePet/scripts/pet-hook.cmd
 ```
