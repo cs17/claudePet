@@ -148,7 +148,10 @@ MAX_SESSIONS = 20
 # field's meaning changes, so entries written by an older version are rescanned
 # from scratch instead of being continued from (see scan_transcript). v4: the
 # offset is now a line boundary, where v3 could leave it inside a fragment.
-RATE_STATE_V = 4
+# v5: zero-token placeholder records no longer consume their message id, so the
+# numerator counts the same responses it always should have; entries written by
+# v4 carry totals that were silently short and cannot be continued from.
+RATE_STATE_V = 5
 # A response that took longer than this is a resume, a sleeping laptop or a
 # stalled connection rather than generation time; counting it would let one
 # outlier swamp the average.
@@ -417,6 +420,19 @@ def scan_transcript(path, entry: dict):
                     continue
                 key = msg.get("id") or rec.get("uuid")
                 if key is None or key in seen:
+                    continue
+                # The first record for a message id is often a thinking-only
+                # placeholder whose usage has not been filled in yet: it carries
+                # output_tokens 0, and the same id is written again once the
+                # response completes. Marking the placeholder as seen consumed
+                # the id, so every real record after it was dropped as a
+                # duplicate — a systematic undercount of the numerator (measured
+                # 15-25x low on this machine), which read as a very slow
+                # generation rate rather than as a bug. So a zero-token record
+                # is skipped without being marked seen, and the first record
+                # that actually carries tokens is the one counted. Repeats of
+                # that record carry the same value and are deduped as before.
+                if _num(usage.get("output_tokens")) <= 0:
                     continue
                 seen.add(key)
                 # Only a response whose request we have seen counts, so the

@@ -352,6 +352,22 @@ jq -cn --arg id "r2" --arg ts '2026-10-20T00:00:04Z' --arg ref "q2" \
 check "a duplicated transcript record is counted once" \
   "$(rate_of "$(rate_run "$RATE_CONFIG" R 2000)")" "100.0 tok/s"
 
+# The same message id is also written *first* as a thinking-only placeholder
+# whose usage is still zeroed, before the completed record appears. That
+# placeholder must not consume the id: doing so dropped every real record and
+# undercounted the numerator 15-25x on a live machine, which showed up as a
+# plausible-looking but far too slow rate. 300 tok over 3s = 100 tok/s.
+jq -cn '{type:"api-request",id:"q3",timestamp:"2026-10-20T00:00:05Z"}' \
+  >> "$TRANSCRIPTS/R.jsonl"
+jq -cn '{type:"assistant",requestRef:"q3",timestamp:"2026-10-20T00:00:05.5Z",
+  message:{id:"r3",usage:{output_tokens:0}}}' >> "$TRANSCRIPTS/R.jsonl"
+jq -cn '{type:"assistant",requestRef:"q3",timestamp:"2026-10-20T00:00:08Z",
+  message:{id:"r3",usage:{output_tokens:300}}}' >> "$TRANSCRIPTS/R.jsonl"
+check "a zero-token placeholder does not hide its completed record" \
+  "$(rate_of "$(rate_run "$RATE_CONFIG" R 2000)")" "100.0 tok/s"
+check "and the placeholder's id was not counted as the response" \
+  "$(jq -r '.sessions.R.paired_tokens' "$PET_DIR/cost-state.json")" "600"
+
 add_pair R3 q1 r1 100 '2026-10-20T00:00:00Z' '2026-10-20T00:00:01Z'
 check "rate survives a model with no price card" \
   "$(rate_of "$(rate_run '{"display":true}' R3 1000)")" "100.0 tok/s"
